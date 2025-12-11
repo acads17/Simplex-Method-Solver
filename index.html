@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf 8.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Simplex Method Solver</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Simplex Method Solver</h1>
+        <p class="muted">
+          Enter the objective (maximize), variables and constraints (use ≤ or ≥). RHS must be a number.
+        </p>
+      </header>
+
+      <div class="form-container">
+        <label for="obj-x-count">Number of decision variables</label>
+        <input id="obj-x-count" type="number" min="1" max="2" value="2" />
+
+        <label for="obj-coeffs">Objective Function (Z =)</label>
+        <input
+          id="obj-coeffs"
+          type="text"
+          placeholder="e.g. 120x + 100y"
+          value="120x + 100y"/>
+
+        <label>Constraints</label>
+        <div id="constraints" class="constraints"></div>
+
+        <div class="actions">
+          <button id="add-constraint" type="button">+ Add Constraint</button>
+          <button id="reset" type="button">Reset</button>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 12px;">
+          <button id="solve" type="button">Solve</button>
+        </div>
+      </div>
+
+      <div id="output" style="margin-top: 18px"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
